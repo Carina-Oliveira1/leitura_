@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<title>Fale Conosco</title>
+		<meta name="author" content="Carina Santos"/>
+		<meta name="keywords" content="Leitura, Livros, Iniciantes, Leitores, Gêneros Literários"/>
+		<meta name="description" content="Instruções e dicas de como iniciar no mundo da leitura"/>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<header>
+			<img src="img/leitura_banner.png" alt="banner contendo ilustrações de livros e pessoas lendo com o título leitura para iniciantes">
+		</header>
+		<nav>
+				<a class="a-menu" href="index.html">HOME</a>
+				<a class="a-menu" href="index.html#pag-beneficios">BENEFÍCIOS</a>
+				<a class="a-menu" href="index.html#pag-generos">GÊNEROS</a>
+				<a class="a-menu" href="index.html#pag-dicas">DICAS</a>
+				<a class="a-menu" href="faleconosco.html">FALE CONOSCO</a>
+		</nav>
+
+			<section id="pag-form">
+			<h1>Fale Conosco</h1>
+
+		<p>Ainda com dúvidas? Nos mande uma mensagem!</p>
+
+		<form name="" method="" action="">
+			<label for="nome">Nome:</label>
+			<input onblur="nomec()" type="text" name="nome_completo" id="nome" size="80" placeholder="Nome Completo" required autofocus/>
+
+			<label for="email1">E-mail:</label>
+			<input onblur="emailc()" type="email" name="email" id="email1" size="80" placeholder="nome@email.com" required /> <br>
+
+			<label for="numero">Celular:</label>
+			<input type="tel" name="telefone" id="numero" placeholder="(99) 99999-9999" pattern="^\(?\d{2}\)\d{5}[-\s]\d{4}.*?$"/> <br>
+
+			<label for="idade">Faixa etária:</label>
+			<select	id="idade" name="idade">
+				<option value="">Selecione</option>
+				<option	value="6-10">6-10 anos</option>
+				<option value="10-18">10-18 anos</option>
+				<option value="18">Acima de 18 anos</option>
+			</select>
+
+			<fieldset>
+				<legend>Gênero:</legend>
+				<input id="masc" type="radio" name="genero" value="m"> <label for="masc">Masculino</label> <br>
+				<input id="fem" type="radio" name="genero" value="f"> <label for="fem">Feminino</label> <br>
+				<input id="nao" type="radio" name="genero" value="pni"> <label for="nao">Prefiro não informar</label>
+			</fieldset>
+
+			<fieldset>
+				<legend>Gênero literário de preferência:</legend>
+				<input id="aven" type="checkbox" name="pref" value="aventura"> <label for="aven">Aventura</label> <br>
+				<input id="ter" type="checkbox" name=pref value="terror"> <label for="ter">Terror</label> <br>
+				<input id="rom" type="checkbox" name="pref" value="romance"> <label for="rom">Romance</label> <br>
+				<input id="acad" type="checkbox" name="pref" academico> <label for="acad">Acadêmico</label> <br>
+
+				<input id="mensagem" type="checkbox" name="mensagem"> <label for="mensagem">Outro? Especifique:</label> <br>
+				<textarea id="mensagem" cols="51" rows="4">
+				
+			</textarea>
+
+			</fieldset>
+
+			<label for="msg">Mensagem:</label> <br>
+			<textarea onclick="msgc()" id="msg" cols="52" rows="4">
+				
+			</textarea>
+
+			<div id="botoes">
+				<input onclick="enviada()" type="submit" name="enviar" value="Enviar">
+				<input type="reset" name="limpar" value="Limpar">
+			</div>
+		</form>
+		</section>
+
+		<footer>
+			<p>Desenvolvido por <a href="http://instagram.com/wiinckle" target="_blank">Carina Santos</a> - 2024</p>
+		</footer>
+
+	</body>
+
+	<script type="text/javascript">
+		function nomec()
+		{
+			var valor = document.getElementById('nome');
+	
+			if(valor.value.length < 5)
+			{
+				alert("O nome deve ter pelo menos 5 caracteres.");
+			}
+		}
+
+		function emailc()
+		{
+			var valor2 = document.getElementById('email1');
+	
+			if(valor2.value.length < 5)
+			{
+				alert("O e-mail deve ter pelo menos 5 caracteres.");
+			}
+		}
+
+		function msgc()
+		{
+			var valor3 = document.getElementById('msg');
+	
+			if(valor3.value.length < 20)
+			{
+				alert("O mínimo de caracteres neste campo é 20.");
+			}
+			else if(valor3.value.length > 200)
+			{
+				alert("O máximo de caracteres neste campo é 200.");
+			}
+		}
+
+		function enviada()
+		{
+			alert("Mensagem eviada com sucesso!");
+		}
+	</script>
+</html>
