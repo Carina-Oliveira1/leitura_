@@ -34,5 +34,5 @@ function nomec()
 
 		function enviada()
 		{
-			alert("Mensagem eviada com sucesso!");
+			alert("Mensagem enviada com sucesso!");
 		}
