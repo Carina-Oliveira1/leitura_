@@ -2,9 +2,9 @@ function nomec()
 		{
 			var valor = document.getElementById('nome');
 	
-			if(valor.value.length < 5)
+			if(valor.value.length < 3)
 			{
-				alert("O nome deve ter pelo menos 5 caracteres.");
+				alert("O nome deve ter pelo menos 3 caracteres.");
 			}
 		}
 
@@ -22,9 +22,9 @@ function nomec()
 		{
 			var valor3 = document.getElementById('msg');
 	
-			if(valor3.value.length < 20)
+			if(valor3.value.length < 5)
 			{
-				alert("O mínimo de caracteres neste campo é 20.");
+				alert("O mínimo de caracteres neste campo é 5.");
 			}
 			else if(valor3.value.length > 200)
 			{
